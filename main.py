@@ -28,7 +28,7 @@ def seed_categories():
     try:
         existing = db.query(models.Category).first()
         if not existing:
-            defaults = ["Food", "Transport", "Rent", "Salary", "Entertainment", "Health"]
+            defaults = ["Food", "Transport", "Rent", "Salary", "Entertainment", "Health", "Pocket Money", "Education", "Shopping", "Other"]
             for name in defaults:
                 db.add(models.Category(name=name))
             db.commit()
